@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>TDEF to STAR*NET</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="DESCRIPTION" />
+    <meta name="keywords" content="convert, starnet" />
+    <meta name="author" content="MicroSurvey" />
+    <link rel="stylesheet" href="css/sgsm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="text-align:center; font-weight:bold;"><a class="button-2" href="http://helpdesk.microsurvey.com/index.php?/Knowledgebase/Article/View/1456">Return to the Main Page</a></p>
+      <form method="post" action="http://support.microsurvey.com/convert/cgi-bin/tdef2sn.py" id="input_text">
+        <fieldset>
+        <legend>STAR*NET Converters</legend>
+        <legend>Trimble Data Exchange Conventional Data to STAR*NET</legend>
+		<legend>PLEASE NOTE: MicroSurvey provides this tool as a courtesy to our customers.  MicroSurvey software software does not assume liability for any results.</legend>		
+		<legend>Compare results against your field notes for accuracy.</legend>	
+
+
+
+		<label for "formvalue_linear">Output Units: </label>
+        <select name="formvalue_linear" form="input_text">
+            <option value="Feet">International Feet</option>
+            <option value="FeetUS">US Feet</option>
+            <option selected="selected" value="Meters">Meters</option>
+        </select>
+
+
+
+
+
+        <label for="content">Paste the contents of your TDEF file and Submit:</label>
+        <textarea name="content" form="input_text"></textarea>
+        <p>
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

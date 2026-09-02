@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>GSI to STAR*NET Converter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Convert files to STAR*NET format" />
+    <meta name="keywords" content="convert, starnet" />
+    <meta name="author" content="Jacob Wall" />
+    <link rel="stylesheet" href="css/sgsm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="text-align:center; font-weight:bold;"><a  class="button-2"  href="http://helpdesk.microsurvey.com/index.php?/Knowledgebase/Article/View/1456">Return to the Main Page</a></p>
+      <form method="post" action="cgi-bin/gsi2sn_coords.py" id="input_text">
+        <fieldset>
+        <h2><legend><strong>GSI Coordinates to STAR*NET Converter</strong></legend></h2>
+		<legend>Thanks to Simple Geospatial Solutions for sharing this converter.   Visit <a href="http://www.sgss.ca">www.sgss.ca</a> to learn more about their services.</legend>
+		<legend>PLEASE NOTE: MicroSurvey provides this tool as a courtesy to our customers.  MicroSurvey software and SGSS software do not assume liability for any results.</legend>		
+		<legend>Compare results against your field notes for accuracy.</legend>	
+		<label for "format">GSI Format: </label>
+		<input type="radio" name="format" value="gsi8" checked> GSI8<br>
+		<input type="radio" name="format" value="gsi16"> GSI16
+		<label for "height">Treat Elevations as: </label>
+		<input type="radio" name="height" value="ortho" checked> Orthometric<br>
+		<input type="radio" name="height" value="ellip"> Ellipsoidal
+        <label for="content">Paste the contents of your GSI file:</label> 
+        <textarea name="content" form="input_text"></textarea> 
+        <p>
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

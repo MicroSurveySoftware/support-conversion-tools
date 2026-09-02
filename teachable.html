@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>Create Teachable Web HTML</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Create HTML for Teachable input" />
+    <meta name="keywords" content="html" />
+    <meta name="author" content="James johnston" />
+    <link rel="stylesheet" href="css/sgsm.css" />
+<style rel="stylesheet">
+    textarea {
+        width: 800px;
+        height: 80px;
+    }
+	label#nomargin {
+	margin-bottom: 0px;
+	}
+	p#nomargin {
+	margin-bottom: 0px;
+	}
+</style>
+
+</head>
+  <body>
+    <div class="container">
+      <p style="text-align:center; font-weight:bold;"><a class="button-2" href="http://helpdesk.microsurvey.com/index.php?/Knowledgebase/Article/View/1456">Converters Page</a></p>
+      <form method="post" action="http://support.microsurvey.com/convert/cgi-bin/teachable.py" id="input_text">
+        <fieldset>
+        <h2><legend><strong>Authors Tool for Teachable Classes</strong></legend></h2>
+        <legend>learn.microsurvey.com and learn.leicaims.com</legend>
+
+
+
+
+		<label for="industry">Industry (this controls the color scheme): </label>
+		<input type="radio" name="industry" value="forensic" checked> Forensics<br>
+		<input type="radio" name="industry" value="geomatics"> Geomatics
+
+		<label for "path"><strong>Path:</strong> URL of course folder once it is assigned.
+        <br><strong>Path to add to online files:</strong> Input path to online folder (  Replace with ..\_media\ for local testing):</label>
+        <input type="text" value = "http://s3.microsurvey.com.s3.amazonaws.com/training/lms/" name="path" size="130">
+
+		<label for "header"><strong>Header:</strong>  Image filename or url
+        <br><strong>Header image:</strong> Input path to online or local 1735x135 image file that will appear at the top of each page:</label>
+		<p><a href="http://s3.microsurvey.com.s3.amazonaws.com/training/lms/headers.html">Visit this page</a> for a full list of pre-uploaded ribbon images.</p>
+        <input type="text" value = "http://s3.microsurvey.com.s3.amazonaws.com/training/lms/pphome.jpg" name="header" size="130">
+		
+		<label for "objective"><strong>Objective:</strong>  Module Objective
+        <br><strong>Objective Text:</strong> In this module we will...:</label>
+        <input type="text" value = "In this module we will..." name="objective" size="130">
+
+
+		<label for="notes"><strong>Notes (Optional) for a bulleted list</strong></label>
+		<p id="nomargin">Hints:</p>
+		<p id="nomargin">One line at a time</p>
+		<p id="nomargin">image formatting: <img src= "image.png"/></p>
+		<p>inline link formatting: <img src= "link.png"/></p>
+        <textarea name="notes" form="input_text">Note1
+<image>imagename.jpg</image>
+Note2
+</textarea>
+        <p>
+
+		<label for="movies"><strong>List of movies</strong></label>
+		<p id="nomargin">Hints:</p>
+		<p id="nomargin">One line at a time</p>
+		<p>movie formatting: <img src= "movie.png"/></p>
+		<textarea name="movies" form="input_text"><file>movie1.mp4<filetext>text to be visible</filetext></textarea>
+        <p>
+
+		<label for="reading"><strong>Readings (Optional) creates a link to an external source</strong></label>
+		<p id="nomargin">Hints:</p>
+		<p id="nomargin">One line at a time</p>
+		<p>link formatting: <img src= "link.png"/></p>
+		
+        <textarea name="reading" form="input_text"></textarea>
+        <p>
+
+		
+		<label for="instructions"><strong>Numbered Instructions</strong></label>
+		<p id="nomargin">Hints:</p>
+		<p>One Line at a time</p>
+		<p id="nomargin">image formatting: <img src= "image.png"/></p>
+		<p>inline link formatting: <img src= "link.png"/></p>
+        <textarea name="instructions" form="input_text">step1
+step2
+<image>imagename.jpg</image>
+step3
+etc...
+</textarea>
+        <p>
+
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

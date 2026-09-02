@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>Orthoslice</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="DESCRIPTION" />
+    <meta name="keywords" content="dxf,orthoslice,Reg360,map360" />
+    <meta name="author" content="MicroSurvey" />
+    <link rel="stylesheet" href="css/sgsm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="text-align:center; font-weight:bold;"><a class="button-2" href="https://help.leicaims.com/article/2266">Return to Orthoslice Article</a></p>
+      <form method="post" action="http://support.microsurvey.com/convert/cgi-bin/fix_dxf.py" id="input_text">
+        <fieldset>
+        <h2><legend><strong>Reg360 Orthoslice Repair Utility</strong></legend></h2>
+        <legend>Reg360 Orthoslice DXF Repair Utility</legend>
+
+<p>At the time this article is published, Register360 v2023.1.0 outputs Orthoslice files in a format that is not compatible with Map360 or AutoCAD because of how paths to external reference images are defined.  
+This online utility was created to correct the paths.</p>
+		
+
+
+
+
+        <label for="content"><strong>INSTRUCTIONS:</strong></label></p>
+		<ul>
+			<li>1. Locate the folder that contains orthoslice output files.  This will consist of one DXF file with "Slice" in the name and one or multiple *.PNG files.</li>
+			<li>&nbsp;</li>
+<img src ="https://s3.microsurvey.com/support/knowledgebaseforensic/Map360/2266/orthosample.png" hspace="30" vspace = "30" width = "50%"><p><p>
+			<li>&nbsp;</li>
+			<li>IMPORTANT! <i>Create a backup copy of the DXF file using a different name.</i></li>
+			<li>2. Open Windows Notepad</li>
+			<li>3. Drag and Drop the original DXF file into Notepad</li>
+			<li>&nbsp;</li>
+<img src ="https://s3.microsurvey.com/support/knowledgebaseforensic/Map360/2266/dragndrop.gif" hspace="30" vspace = "30" width = "50%"><p>
+			<li>&nbsp;</li>
+			<li>4. Edit | Select All to highlight entire contents of file</li>
+			<li>5. Edit | Copy:</li>
+			<li>&nbsp;</li>
+<p><img src ="https://s3.microsurvey.com/support/knowledgebaseforensic/Map360/2266/notepadcopy.gif" hspace="30" vspace = "30" width = "50%"><p>
+			<li>&nbsp;</li>
+	
+			<li>6. Right click in "DXF Input Field" at the bottom of this page and select "Paste"</li>
+			<li>7. Submit</li>
+			<li>8. The page that opens will contain the adjusted contents for the DXF file</li>
+			<li>9. Left click inside the output window </li>
+			<li>10. CTRL A to highlight contents</li>
+			<li>11. CTRL C to copy contents</li>
+			<li>12. Left click back in Windows Notepad</li>
+			<li>13. Edit | Select All to highlight entire contents of file</li>
+			<li>14. Edit | Paste to overwite contents of file</li>
+			<li>15. File | Save</li>
+			<li>NOTE: <i>Do not change the name of the DXF file when you save</i></li>
+			<li>16. Use the <a href="https://s3.microsurvey.com/movies/ims-map360/ims-map360-cts-cad/orthoimage.mp4"target="_blank">Orthoslice import utility</a> in Map360 to test the result</li>
+			<li>Please <a href="https://help.leicaims.com/article/2288"target="_blank"> contact the support team</a> if there are still issues with the orthoslice. Please provide a copy of the DXF file if possible.</li>
+		</ul>
+		<Strong>DXF Input Field:</Strong><p>
+		
+        <textarea name="content" form="input_text"></textarea>
+        <p>
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>List2Traverse</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="DESCRIPTION" />
+    <meta name="keywords" content="convert, starnet" />
+    <meta name="author" content="MicroSurvey" />
+    <link rel="stylesheet" href="css/sgsm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="text-align:center; font-weight:bold;"><a class="button-2" href="https://helpdesk.microsurvey.com/index.php?/Knowledgebase/Article/View/1456">Return to the Main Page</a></p>
+      <form method="post" action="http://support.microsurvey.com/convert/cgi-bin/listing2trav.py" id="input_text">
+        <fieldset>
+        <h2><legend><strong>Extract Traverse Input from a STAR*NET 2D Listing</strong></legend></h2>
+        <legend>Listing to Traverse</legend>
+
+
+
+
+		<label for "formvalue_text"><strong>Purpose:</strong> This online utility allows you to input a 2D listing from an adjustment and a comma separated list of stations that defines the path to be followed by a traverse through the stations.  
+		The listing "Summary of Unadjusted Input Observations" section will be searched for all possible angle, distance and direction inputs that can be used and averaged to populate the traverse.  Standard error as defined in the listing is included inline so that weighting will be defined exactly as in the original adjustment.  If multiple matches for an input are found they will be averaged, and the associated standard errors will be propagated to reflect the higher redundancy.  </p>
+		<ul>
+			<li>NOTES</li>	
+			<li>Listing must be from a 2D adjustment.</li>	
+			<li>Listing input order must be "at-from-to".</li>	
+			<li>If <strong>Allow Reverse Matches?</strong> is set to "Yes" any angle observations and distances observed in reverse from the traverse direction will be included in the traverse output.</li>
+			<li>A '?' placeholder will be output if no match is found for inclusion in the traverse.</li>
+			<li>Any measurement weighted as "FREE" will be excluded with a comment.</li>
+
+		</ul>
+			
+			
+		</p>
+
+        <br><strong>Define Traverse:</strong> Enter a string of station names separated by commas: (Backsight point 1,Occupy point 1,Occupy point 2 ... Occupy point n,Foresight point n)</p></label>
+        <input type="input_text" value = " " name="formvalue_text" size="100">
+
+
+		</p><label for "formvalue_pulldown">Allow Reverse Matches?: </label>
+        <select name="formvalue_pulldown" form="input_text">
+            <option selected="selected" value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        </p><label for="content">Paste contents of STAR*NET Listing in space below and "Submit":</label>
+        <textarea name="content" form="text"></textarea>
+        <p>
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

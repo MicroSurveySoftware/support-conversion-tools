@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>Instrument Settings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Compute Conventional Instrument Settings for STAR*NET" />
+    <meta name="keywords" content="variances, starnet" />
+    <meta name="author" content="MicroSurvey" />
+    <link rel="stylesheet" href="css/sgsm.css" />   
+  </head>
+	
+  <body>
+	  <div id="header" style="background-color: #2b3636;">
+		 	   <div id="logo" style="margin: auto; width: 960px;">
+		<img src="https://assets.microsurvey.com/images/helpdesk/mic-logo.png"/>
+			  </div>
+		</div>
+    <div class="container">
+		<fieldset>
+		  <legend>Related Training</legend>
+			<a target="_blank" href="https://learn.microsurvey.com/p/starnet-3"><img src="https://s3.microsurvey.com/training/lms/starnet3.png" alt="STAR*NET Certification 3 Info" style="width:352px; padding: 25px; height:198px; float: left; display: block;"/></a><h2 style="padding-left: 25px; display: block; position: relative; float: left; width: 500px"><a target="_blank" href="https://learn.microsurvey.com/p/starnet-3"><strong>STAR*NET Certificaton  3: Standard Errors</strong></a></h2><p style="padding-left: 25px; display: block; position: relative; float: left; width: 500px">Learn the fundamentals of computing and applying standard errors and apply them to preanalysis and an instrument library</p>
+		  </fieldset>
+			</div></p>
+      <p style="text-align:center; font-weight:bold;"><a class="button-2" href="https://helpdesk.microsurvey.com/article/1339-online-utilities-for-star-net">Return to the Main Page</a></p>
+		<div style="margin-bottom: 40px;">
+
+
+        <fieldset>
+      <form method="post" action="http://support.microsurvey.com/convert/cgi-bin/instrumentsettings.py" id="input_text">  
+
+        <h2><legend><strong>Compute Instrument Settings for Conventional Data</strong></legend></h2>
+        <legend>STAR*NET Online Utilities</legend>
+            <div style="line-height: 24px;">Instrument settings are used to constrain measurements in your STAR*NET project.  They may be computed from procedural testing.  Most commonly they are approximated from instrument specifications and what you know about your procedures and equipment.  Answer the questions below and this utility will provide you with approximate values you can use to constrain your measurements.</div>  
+		<br>
+
+
+<hr>
+
+            <label for "formvalue_text"><h2><strong>Angular Measurement Details:</strong></h2></label>
+            <div style="line-height: 24px;">Select options for angular and directional measurements.  Always select "1" for "Number of Sets" UNLESS  you are inputting values that were averaged from multiple observations.  If your project includes more than one type of averaging procedure you may need to use an instrument library.</div>
+		<br>
+
+
+
+
+
+		<br>
+		<strong>Number of Sightings per Target</strong>
+		<label for "formvalue_pulldown_sets">Number of Sightings averaged into a single angle or direction input: </label>
+		<a href="https://helpdesk.microsurvey.com/article/1292-computing-instrument-settings-for-conventional-measurements#sets"><i>What's This?</i></a><br>
+        <select name="formvalue_pulldown_sets" form="input_text">
+            <option selected="selected" value="1">1 (1 BS + 1 FS)</option>
+			<option value="2">2 (2 BS + 2 FS)</option>
+            <option value="4">4 (4 BS + 4 FS)</option>
+            <option value="6">6 (6 BS + 6 FS)</option>
+            <option value="8">8 (8 BS + 8 FS)</option>
+            <option value="10">10 (10 BS + 10 FS)</option>
+            <option value="12">12 (12 BS + 12 FS)</option>
+        </select>
+		<br>
+		
+
+
+          
+		<label for="formvalue_au"><strong>Angular Units: </strong></label>
+		<input type="radio" name="formvalue_au" value="degrees" checked> DMS
+		<input type="radio" name="formvalue_au" value="gons"> Gons
+		<br>				
+		<hr>
+		
+<h2><strong>Instrument Specifications: </strong></h2><br>
+            <div style="line-height: 24px;">Enter values from your instrument specifications or from a recent instrument calibration report.</div>
+
+
+		<br>
+        <strong>DIN 18723 or ISO 17123 Directional Accuracy:</strong> Instrument directional accuracy from manufacturer specifications:</label><br>
+          <div style="padding-top: 10px;"><a href="https://helpdesk.microsurvey.com/article/1292-computing-instrument-settings-for-conventional-measurements#din"><i>What's This?</i></a></div>
+	
+        <input type="text" value="1" name="formvalue_din" size="10">
+		 Seconds/Milligons
+		<br>
+          <div style="padding-top: 10px;"><a href="https://helpdesk.microsurvey.com/article/1292-computing-instrument-settings-for-conventional-measurements#root2"><i>Why would I do this?</i></a></div>
+		<label for="formvalue_radio">Multiply by √2?  </label>
+		<input type="radio" name="formvalue_sqrt" value="yes" checked> Yes
+		<input type="radio" name="formvalue_sqrt" value="no"> No<br>
+		
+        <br><strong>EDM Constant:</strong> EDM constant from manufacturer specifications</label><br>
+        <div style="padding-top: 10px;"><a href="https://helpdesk.microsurvey.com/article/1292-computing-instrument-settings-for-conventional-measurements#edmconst"><i>What's This?</i></a></div>
+		
+        <input type="text" value="0" name="formvalue_edm" size="10">
+		Meters/Feet
+		<br>
+        <br><strong>EDM PPM:</strong> EDM PPM from manufacturer specifications<br>
+        <div style="padding-top: 10px;"><a href="https://helpdesk.microsurvey.com/article/1292-computing-instrument-settings-for-conventional-measurements#ppm"><i>What's This?</i></a></label></div>
+        <input type="text" value="0" name="formvalue_ppm" size="10">
+		Parts per million
+		<br>
+		<br>
+<hr>
+		
+
+<h2><strong>Other Specifications: </strong></h2><i>The following values may be approximated, computed, read from specifications or left at default</i>		
+<br>
+
+		<br>
+        <strong>Azimuth/Bearing Accuracy:</strong> Approximate value for constraining Azimuth/Bearing entries:</label><br>
+    <div style="padding-top: 10px;"><a href="https://helpdesk.microsurvey.com/article/1292-computing-instrument-settings-for-conventional-measurements#azimuth"><i>What's This?</i></a></div>
+		
+        <input type="text" value="1" name="formvalue_az" size="10">
+		 Seconds/Milligons
+		<br>
+		
+        <br>
+  <strong>Instrument Centering Error:</strong> Centering Error for instrument optical or laser plummet:<br>
+		  <div style="padding-top: 10px;"><a href="https://helpdesk.microsurvey.com/article/1292-computing-instrument-settings-for-conventional-measurements#instctr"><i>What's This?</i></a></div></label>
+		
+        <input type="text" value=".001" name="formvalue_instctr" size="10">
+		Meters/Feet
+		<br>
+
+        <br>
+		<strong>Target Centering Error:</strong> Centering Error of target tribach optical plummet or rod centering method:<br>
+		<div style="padding-top: 10px;"><a href="https://helpdesk.microsurvey.com/article/1292-computing-instrument-settings-for-conventional-measurements#target"><i>What's This?</i></a></label></div>
+	
+        <input type="text"  value=".001" name="formvalue_trgctr" size="10">
+		Meters/Feet
+		<br>
+		
+		
+        <br>		
+		<strong>ATR Centering Error:</strong> Centering Error of target recognition system:<br>
+		<div style="padding-top: 10px;"><a href="https://helpdesk.microsurvey.com/article/1292-computing-instrument-settings-for-conventional-measurements#atr"><i>What's This?</i></a></label></div>
+	
+        <input type="text"  value="0" name="formvalue_trgatr" size="10">
+		Meters/Feet
+		<br>
+
+
+		<br>
+        <strong>Vertical Centering Error:</strong> Error allowable for Instrument and Target Height Measurement:<br>
+		<div style="padding-top: 10px;"><a href="https://helpdesk.microsurvey.com/article/1292-computing-instrument-settings-for-conventional-measurements#vert"><i>What's This?</i></a></label></div>
+	
+        <input type="text"  value=".001" name="formvalue_vert" size="10">
+		Meters/Feet
+		<br>
+		<br>
+		<br>
+
+
+
+
+
+
+
+
+
+        <p>
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</p>
+<br>
+		<br>
+		<br>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

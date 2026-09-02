@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>Jobxml Modifier Utility</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="DESCRIPTION" />
+    <meta name="keywords" content="convert, starnet,jobxml" />
+    <meta name="author" content="MicroSurvey" />
+    <link rel="stylesheet" href="css/sgsm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="text-align:center; font-weight:bold;"><a class="button-2" href="http://helpdesk.microsurvey.com">Return to Helpdesk</a></p>
+      <form method="post" action="cgi-bin/JobxmlModifier.py" id="input_text">
+        <fieldset>
+        <h2><legend><strong>Jobxml Modifier Utility</strong></legend></h2>
+        <legend>Resolves "Name element must be a child of PointRecord or Point" issue</legend>
+
+
+
+
+
+		<label for "formvalue_text"><strong>Purpose:</strong> <i>Use this utility with care and compare results against field notes for accuracy.  This utility is provided as a courtesy to provide a 
+		temporary solution to an known issue that makes jobxml version 6.30 and newer files incompatible with MicroSurvey Jobxml 
+		converter versions 13 and older.</i>   This utility will modify input data <a href="https://helpdesk.microsurvey.com/article/2322">as documented in this article.</a>  
+		Modified output is written to a form in the next page and can be copied into a new text file which can be
+		named with a ".jxl" extension and read by the Jobxml converter.</p>		
+
+
+
+
+
+
+
+
+
+        <label for="content">INSTRUCTIONS:</label> Open Jobxml file in a text editor and paste contents into field below:</p>
+        <textarea name="content" form="input_text"></textarea>
+        <p>
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

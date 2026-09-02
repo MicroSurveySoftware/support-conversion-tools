@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>Magnet Cleanup</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="DESCRIPTION" />
+    <meta name="keywords" content="convert, starnet" />
+    <meta name="author" content="MicroSurvey" />
+    <link rel="stylesheet" href="css/sgsm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="text-align:center; font-weight:bold;"><a class="button-2" href="http://helpdesk.microsurvey.com/index.php?/Knowledgebase/Article/View/1456">Return to the Main Page</a></p>
+      <form method="post" action="http://support.microsurvey.com/convert/cgi-bin/magnetcleanup.py" id="input_text">
+        <fieldset>
+        <h2><legend><strong>Magnet Export to STAR*NET Cleanup</strong></legend></h2>
+        <legend>STAR*NET Utilities</legend>
+        <legend>Automate commonly required manual edits for STAR*NET file exported from Topcon and Sokkia Magnet 6.0</legend>
+		<legend>PLEASE NOTE: MicroSurvey provides this tool as a courtesy to our customers.  MicroSurvey software software does not assume liability for any results.</legend>		
+		<legend>Compare results against your field notes for accuracy.</legend>	
+
+
+<br><strong>Options:</strong><br>
+
+		<label for="formvalue_radio">Remove Inline Standard Errors and Insert as Comments: </label>
+		<input type="radio" name="stripstderr" value="y" checked>Yes
+		<input type="radio" name="stripstderr" value="n">   No<br><br>
+		
+		<label for="formvalue_radio">Comment Out C Records and Move to Top of File: </label>
+		<input type="radio" name="movec" value="y" checked>Yes
+		<input type="radio" name="movec" value="n">   No<br><br>
+		
+		<label for="formvalue_radio">Comment out Bearings: </label>
+		<input type="radio" name="combear" value="y" checked>Yes
+		<input type="radio" name="combear" value="n">   No<br><br>
+
+        <label for="content">1. Export Starnet format from your Magnet software.<br>2. Open the resulting *.dat file with a text editor.<br>3. Ctrl-a to select all.<br>4. Ctrl-c to copy all.<br>5. Click in the field below and Ctrl-v to paste the contents of your dat file.<br>6. "Submit":</label>
+        <textarea name="content" form="input_text"></textarea>
+        <p>
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

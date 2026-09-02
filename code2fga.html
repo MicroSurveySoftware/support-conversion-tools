@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>Code to FGA</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="DESCRIPTION" />
+    <meta name="keywords" content="convert, starnet" />
+    <meta name="author" content="MicroSurvey" />
+    <link rel="stylesheet" href="css/sgsm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="text-align:center; font-weight:bold;"><a class="button-2" href="http://helpdesk.microsurvey.com/index.php?/Knowledgebase/Article/View/1456">Return to the Main Page</a></p>
+      <form method="post" action="http://support.microsurvey.com/convert/cgi-bin/code2fga.py" id="input_text">
+        <fieldset>
+        <h2><legend><strong>Codelist to FGA Utility</strong></legend></h2>
+        <legend>Input a text document defining your codelist and use contents to build a FieldGenius for Android codelist</legend>
+NOTE: Default Configuration is for FieldGenius or MicroSurvey CAD AutoMap<br>Email your text file to Helpdesk if you require help with custom formatting.
+
+
+
+		<label for "formvalue_pulldown"><br>Select Predefined format or Custom Option if required: </label><br>
+        <select name="formvalue_pulldown" form="input_text">
+            <option selected="selected" value="automap">MicroSurvey AutoMap [format string "A,L,0,1"]</option>
+            <option value="A,B,0,1">Code,Line (0 or 1) [format string "A,B,0,1"]</option>
+            <option value="A,B,N,Y">Code,Line (N or Y) [format string "A,B,N,Y"]</option>
+            <option value="A,B,OFF,ON">Code,Line (OFF or ON) [format string "A,B,OFF,ON"]</option>
+            <option value="D,A,0,1">ID,X,Y,code [format string "D,A,0,1"]</option>
+            <option value="E,A,0,1">ID,X,Y,Z,code [format string "E,A,0,1"]</option>
+            <option value="D,E,0,1">ID,X,Y,code, Line (0 or 1) [format string "D,E,0,1"]</option>
+            <option value="D,E,Y,N">ID,X,Y,code, Line (Y or N) [format string "D,E,Y,N"]</option>
+            <option value="E,A,0,1">ID,X,Y,Z,code [format string "E,A,0,1"]</option>
+            <option value="E,F,0,1">ID,X,Y,Z,code, Line (0 or 1) [format string "E,F,0,1"]</option>
+            <option value="E,F,ON,OFF">ID,X,Y,Z,code, Line (ON or OFF) [format string "E,F,ON,OFF"]</option>
+            <option value="custom">Custom Format [Define format string below]</option>
+        </select>
+
+		<label for "formvalue_text"><br><strong>Custom format String Instructions<br> (Skip if you've selected a Predefined Format above):</strong> <br><br>Open your text document in Excel<br>
+		1. Note Letter of Column for your Code<br>
+		2. Note Letter of Column (if any) that specifies if this Code is a Point Code or Line Code. (Use A if there is none)<br>
+		3. Note entry (if any) that specifies a Point Code(Use 0 if there is none)<br>
+		4. Note entry (if any) that specifies a Line Code(Use 1 if there is none)<br>		
+		6. Enter the custom format code below using information collected in steps 1,2,3,4<br>	
+		<br>NOTE: Examples in Predefined menu above are intended to help you understand the formatting<br> Enter the custom format code below using information collected in steps 1,2,3,4<br>
+
+        <br><strong>Custom Format String:</strong> <br>Input string in format: <br>Code Column,Line Code Column,Point Entry,Line Entry:</label><br>
+        <input type="text" value = "A,L,0,1" name="formvalue_text" size="20">
+
+		<label for="formvalue_radio">Separator for Custom Format: </label>
+		<input type="radio" name="formvalue_radio" value="," checked> comma<br>
+		<input type="radio" name="formvalue_radio" value=" "> single space<br>
+		<input type="radio" name="formvalue_radio" value=":"> colon<br>
+
+		<label for "formvalue_pulldown">Does your Input include a Header? </label>
+        <select name="header" form="input_text">
+            <option selected="selected" value="1">YES</option>
+            <option value="0">NO</option>
+
+        </select>
+
+
+
+
+        <br><label for="content">1. Open your AutoMap or text document in Notepad<br>2. CTRL-A to select all<br>3. CTRL-C to copy<br>4. Click in field below<br>5. CTRL-V to Paste<br>6. Submit</label>
+        <textarea name="content" form="input_text"></textarea>
+        <p>
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

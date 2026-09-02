@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>Codelist</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="DESCRIPTION" />
+    <meta name="keywords" content="convert, starnet" />
+    <meta name="author" content="MicroSurvey" />
+    <link rel="stylesheet" href="css/sgsm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="text-align:center; font-weight:bold;"><a class="button-2" href="http://helpdesk.microsurvey.com/index.php?/Knowledgebase/Article/View/1456">Return to the Main Page</a></p>
+      <form method="post" action="http://support.microsurvey.com/convert/cgi-bin/codelist.py" id="input_text">
+        <fieldset>
+        <legend>AutoMap to Infinity Codelist Converter</legend>
+        <legend>Creates a text file you use to build an Infinity or Captivate codelist from your AutoMap</legend>
+		<legend>PLEASE NOTE: MicroSurvey provides this tool as a courtesy to our customers.  MicroSurvey software does not assume liability for any results.</legend>		
+
+
+		<label for="formvalue_radio">Coordinate Order: </label>
+		<input type="radio" name="formvalue_radio" value="ne" checked> North-East<br>
+		<input type="radio" name="formvalue_radio" value="en"> East-North	
+
+
+
+
+        <label for="content">Paste the contents of your AutoMap file into the field below and select "Submit:"</label>
+        <textarea name="content" form="input_text"></textarea>
+        <p>
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

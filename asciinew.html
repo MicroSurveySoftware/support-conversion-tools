@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>ASCII to STAR*NET Converter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Convert files to STAR*NET format" />
+    <meta name="keywords" content="convert, starnet" />
+    <meta name="author" content="Jacob Wall" />
+    <link rel="stylesheet" href="css/sgsm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="text-align:center; font-weight:bold;"><a class="button-2" href="http://helpdesk.microsurvey.com/index.php?/Knowledgebase/Article/View/1456">Return to the Main Page</a></p>
+      <form method="post" action="http://support.microsurvey.com/convert/cgi-bin/ascii2sn.py" id="input_text">
+        <fieldset>
+        <h2><legend><strong>ASCII to STAR*NET Converter</strong></legend></h2>
+		<label for "delimiter">Choose Delimiter: </label>
+		<select name="delimiter" form="input_text">
+			<option value="comma">Comma</option>
+			<option value="space">Space</option>
+			<option value="tab">Tab</option>
+		</select>
+		<label for "format">Choose Format: </label>
+		<select name="format" form="input_text">
+			<option value="pnezd">P - N - E - Z - D</option>
+			<option value="pnez">P - N - E - Z</option>
+			<option value="pned">P - N - E - D</option>
+			<option value="pne">P - N - E</option>
+			<option value="penzd">P - E - N - Z - D</option>
+			<option value="penz">P - E - N - Z</option>
+			<option value="pend">P - E - N - D</option>
+			<option value="pen">P - E - N</option>
+		</select>
+		<label for "height">Treat Elevations as: </label>
+		<input type="radio" name="height" value="ortho" checked> Orthometric<br>
+		<input type="radio" name="height" value="ellip"> Ellipsoidal
+        <label for="content">Paste the contents of your ASCII Delimited file:</label>
+        <textarea name="content" form="input_text"></textarea>
+        <p>
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

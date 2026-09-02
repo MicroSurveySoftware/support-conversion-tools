@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <title>Grid to Ground</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="DESCRIPTION" />
+    <meta name="keywords" content="convert, starnet" />
+    <meta name="author" content="MicroSurvey" />
+    <link rel="stylesheet" href="css/sgsm.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="text-align:center; font-weight:bold;"><a class="button-2" href="http://helpdesk.microsurvey.com/index.php?/Knowledgebase/Article/View/1456">Return to the Main Page</a></p>
+      <form method="post" action="http://support.microsurvey.com/convert/cgi-bin/grid2gnd.py" id="input_text">
+        <fieldset>
+        <h2><legend><strong>Grid to Ground</strong></legend></h2>
+        <legend>Export Ground Coordinates file</legend>
+
+
+		<label for="skiphead"><strong>Exclude First Line? </strong></label>
+		<input type="radio" name="skiphead" value="0" checked> NO<br>
+		<input type="radio" name="skiphead" value="1"> YES<br><br>
+
+
+		<label for="separator"><strong>Separator: </strong></label>
+		<input type="radio" name="separator" value="," checked> Comma<br>
+		<input type="radio" name="separator" value=" "> Space<br><br>
+
+		<label for "origin"><strong>Origin:</strong> Leave as 0,0 if not required
+        <br><strong></strong> Format N.nnn,N.nnn or N.nnn N.nnn:</label>
+        <input type="text" value = 0.000,0.000 name="origin" size="75"><br><br>
+		
+		<label for "scale"><strong>Grid to Ground Scale Factor:</strong> 
+        <br><strong></strong> Enter Scale factor:</label>
+        <input type="text" value = "1.0000" name="scale" size="75"><br><br>
+		
+        <label for="content">Paste the contents of your grid referenced ascii file:</label>
+		<label for="content">Required Format: Space or Comma delimited Pt#,North,East,Elev,Desc or Pt#,East,North,Elev,Desc:</label>
+        <textarea name="content" form="input_text"></textarea>
+        <p>
+		<button class="submitbutton" type="submit" value="Submit">Submit</button>
+		</p>
+		</fieldset>
+      </form>
+    </div>
+  </body>
+</html>

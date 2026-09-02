@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+
+table {
+    border: 1px;
+    border-color: grey;
+    padding: 10px;
+}
