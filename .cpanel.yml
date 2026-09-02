@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/supportmicrosurv/public_html/convert
+    - /bin/cp -R * $DEPLOYPATH
